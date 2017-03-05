@@ -1,6 +1,0 @@
-framework module Pods_App2SSO {
-  umbrella header "Pods-App2SSO-umbrella.h"
-
-  export *
-  module * { export * }
-}
