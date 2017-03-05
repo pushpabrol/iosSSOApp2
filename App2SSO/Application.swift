@@ -22,7 +22,8 @@ class Application {
         
         var path = Bundle.main.path(forResource: "Info", ofType: "plist")
         var dict = NSDictionary(contentsOfFile: path!)
-                self.keychainService = A0SimpleKeychain.init(service: "Auth0", accessGroup: "com.auth0.Auth0WebAuth");
+        self.keychainService = A0SimpleKeychain.init(service: "Auth0", accessGroup: "R82LKF5W93.com.auth0.Auth0WebAuth");
+        self.keychainService.defaultAccessiblity =  A0SimpleKeychainItemAccessible.always
         let urlString = dict!.object(forKey: "APIUrl") as! String
         let baseURL = NSURL(string: urlString)
         self.securePingURL = NSURL(string: "/api/secured", relativeTo: baseURL as URL?)!
