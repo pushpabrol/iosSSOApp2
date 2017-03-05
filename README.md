@@ -2,6 +2,12 @@
 
 - A project using Auth0.swift to show Login via an iOS app and generating both access_token and refresh_token for sign in,  calling an API and SSO to a website protected by Auth0 and also SSO to another App - iosSSOApp2
 
+## Setup.
+ - Download the project file
+ - Make sure you have atleast v1.1.1 of Cocoa Pods installed
+ - open the folder in command line
+ - `pod install` -- to install the dependencies
+ - `open App2SSO.xcworkspace` -- to open this in xcode and launch a simulator
 
 ## How it works
  - User signs in using this App which uses a auth0 SDK that launches the login within a web view. The user authenticates with the `audience=Identifier_for_API as defined within Auth0` and the `scope = openid profile offline_access api:scopes` where api:scopes represents the set of scopes the user will consent to allow the App to present to the API.
