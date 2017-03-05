@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationEnteredForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         
-        
         checkRefreshTokenAndPerformSegue()
         
 
@@ -37,7 +36,22 @@ class ViewController: UIViewController {
     }
     
     func applicationEnteredForeground(){
-    checkRefreshTokenAndPerformSegue()
+        if (Application.sharedInstance.keychainService.string(forKey: "refreshToken") != nil)
+        {
+            getTokens(fromRefreshToken: Application.sharedInstance.keychainService.string(forKey: "refreshToken")! )
+            self.performSegue(withIdentifier: "loggedin", sender: self)
+            
+            
+            
+        }
+        else
+        {
+            
+            if(self.navigationController?.visibleViewController?.isKind(of: LoggedInViewController.self))!
+            {
+                    self.performSegue(withIdentifier: "loginView", sender: self)
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

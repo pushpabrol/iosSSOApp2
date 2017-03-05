@@ -16,7 +16,6 @@
 		11D2A37A1DCA6ABA0094ED6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D2A3781DCA6ABA0094ED6E /* Main.storyboard */; };
 		11D2A37C1DCA6ABA0094ED6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D2A37B1DCA6ABA0094ED6E /* Assets.xcassets */; };
 		11D2A37F1DCA6ABA0094ED6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D2A37D1DCA6ABA0094ED6E /* LaunchScreen.storyboard */; };
-		700BE4766B7ED905EF6B7387 /* Pods_Auth0WebAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625FDE9F01C55A482065F270 /* Pods_Auth0WebAuth.framework */; };
 		BACA8E8FA8F2D68E821113D2 /* Pods_App2SSO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F0C6D6A611C27E1F4AE65 /* Pods_App2SSO.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700BE4766B7ED905EF6B7387 /* Pods_Auth0WebAuth.framework in Frameworks */,
 				BACA8E8FA8F2D68E821113D2 /* Pods_App2SSO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B41B2627121C7C012373C39F /* [CP] Copy Pods Resources */ = {
